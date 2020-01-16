@@ -4,7 +4,7 @@
 *------------------------------------------------------------------------------------------
 */
 html { 
-    background: rgba(65,64,66,.8); 
+    background: var(--bg-color); 
 
     body { 
         font: 14px/21px "Cabin", Helvetica, Arial, sans-serif; 
@@ -19,6 +19,9 @@ html {
         .azad-container{
             width:90%;
             margin:0 auto;
+        }
+        .azad-section{
+            padding:5rem 0;
         }
 
         h1 { font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif; }

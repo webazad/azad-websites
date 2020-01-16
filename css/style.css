@@ -41,7 +41,7 @@ address, article, aside, canvas, details, figure, figcaption, footer, header, hg
 *------------------------------------------------------------------------------------------
 */
 html {
-  background: rgba(65, 64, 66, 0.8); }
+  background: var(--bg-color); }
   html body {
     font: 14px/21px "Cabin", Helvetica, Arial, sans-serif;
     color: var(--text-color);
@@ -59,6 +59,8 @@ html {
     html body .azad-container {
       width: 90%;
       margin: 0 auto; }
+    html body .azad-section {
+      padding: 5rem 0; }
     html body h1 {
       font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
     html body h2, html body h3 {
@@ -110,7 +112,10 @@ html {
 
 :root {
   --border-top-color: tomato;
-  --text-color: #39e1f5; }
+  --text-color: #39e1f5;
+  --bg-color:rgba(65,64,66,.8);
+  --white-color:rgba(255,255,255,1);
+  --black-color:rgba(0,0,0,1); }
 
 .azad-header {
   border-top: 0.001rem solid var(--border-top-color);
@@ -119,7 +124,11 @@ html {
   .azad-header .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
     .azad-header .header-container .logo {
       width: 100%;
       text-align: left; }
@@ -144,6 +153,45 @@ html {
             color: var(--text-color);
             padding: 10px;
             display: block; }
+
+@media only screen and (max-width: 767px) {
+  .azad-header .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .azad-header .header-container .logo {
+      text-align: center; }
+    .azad-header .header-container .azad-nav .azad-menus ul {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+.azad-demo {
+  background: var(--text-color);
+  color: var(--white-color);
+  text-align: left; }
+  .azad-demo h2 {
+    margin-bottom: 2rem; }
+  .azad-demo a {
+    color: blue; }
+    .azad-demo a:link {
+      color: var(--white-color); }
+    .azad-demo a:hover {
+      color: var(--black-color); }
+
+.azad-sites {
+  background: var(--bg-color);
+  color: var(--white-color);
+  text-align: left; }
+  .azad-sites h2 {
+    margin-bottom: 2rem; }
+  .azad-sites a {
+    color: blue; }
+    .azad-sites a:link {
+      color: var(--white-color); }
+    .azad-sites a:hover {
+      color: var(--black-color); }
 
 .azad-footer {
   background: #ffffff;
