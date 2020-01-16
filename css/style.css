@@ -1,0 +1,153 @@
+/**
+*------------------------------------------------------------------------------------------
+*	= PROJECT NAME: A LANDING PAGE
+*	= PROJECT DESCRIPTION: A BUSINESS LANDING PAGE
+*	= FILE NAME: CUSTOM.CSS
+*	= AUTHOR: MD. ABUL KALAM AZAD
+*	= AUTHOR URI: http://www.theinfotechs.com
+*	= DEVELOPER: MD. ABUL KALAM AZAD
+*	= DEVELOPER URI: http://www.theinfotechs.com
+*	= VERSION: 0.0.1
+*	= DEVELOPMENT DATE: 21/12/16
+* 	= COUNTRY: BANGLADESH
+*------------------------------------------------------------------------------------------
+*/
+/**
+*------------------------------------------------------------------------------------------
+*	:: SECOND WAY TO RESET CODE
+*------------------------------------------------------------------------------------------
+*/
+html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite, code, del, dfn, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, lagend, table, caption, tbody, thead, tfoot, th, tr, td, section, article, aside, header, hgroup, nav, menu, footer, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, mark, span, em, strong, img, ol, ul, li, figure, figcaption, details, embed, canvas, audio, video, output, ruby summary input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font: inherit;
+  background: transparent; }
+
+/**
+*------------------------------------------------------------------------------------------
+*	:: HTML5 DISPLAY RULE
+*------------------------------------------------------------------------------------------
+*/
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, main {
+  display: block; }
+
+/**
+*------------------------------------------------------------------------------------------
+*	:: GLOBAL STYLE
+*------------------------------------------------------------------------------------------
+*/
+html {
+  background: rgba(65, 64, 66, 0.8); }
+  html body {
+    font: 14px/21px "Cabin", Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    /* Chrome Suffery     */
+    -moz-font-smoothing: antialiased;
+    /* Firefox            */
+    -ms-font-smoothing: antialiased;
+    /* Internet Explorer  */
+    -o-font-smoothing: antialiased;
+    /* Opera              */
+    font-smoothing: antialiased;
+    /* Official           */ }
+    html body .azad-container {
+      width: 90%;
+      margin: 0 auto; }
+    html body h1 {
+      font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+    html body h2, html body h3 {
+      font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+    html body h4 {
+      font: 16px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+    html body h5 {
+      font: 14px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+    html body h6 {
+      font: 12px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+    html body a {
+      text-decoration: none; }
+    html body a:link {
+      color: var(--text-color);
+      text-decoration: none; }
+    html body a:hover, html body a:focus, html body a:active, html body a:visited {
+      color: var(--border-top-color);
+      text-decoration: underline; }
+    html body p {
+      margin-bottom: 1em; }
+    html body strong {
+      font-weight: bold; }
+    html body em {
+      font-style: italic; }
+    html body ol, html body ul {
+      list-style: none; }
+    html body blockquote {
+      border: 0;
+      font: italic 21px/1.5em "Gentium Basic", Georgia, serif;
+      color: #2894d8; }
+    html body blockquote cite {
+      display: block;
+      margin-top: 42px;
+      font-size: 16px;
+      font-style: normal; }
+    html body hr {
+      border: none;
+      height: 1px;
+      background-color: #ededed;
+      margin: 3em 0; }
+    html body input {
+      background: #696969;
+      border: 1px solid #c3c3c3;
+      color: #cbcbcb;
+      padding: 3px; }
+    html body input:focus, html body input:hover {
+      background: #ededed;
+      color: #4e4e4e; }
+
+:root {
+  --border-top-color: tomato;
+  --text-color: #39e1f5; }
+
+.azad-header {
+  border-top: 0.001rem solid var(--border-top-color);
+  padding: 1rem 0px;
+  background: #ffffff; }
+  .azad-header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .azad-header .header-container .logo {
+      width: 100%;
+      text-align: left; }
+      .azad-header .header-container .logo h1 {
+        line-height: unset; }
+    .azad-header .header-container .azad-nav {
+      width: 100%; }
+      .azad-header .header-container .azad-nav .azad-menus {
+        height: 100%; }
+        .azad-header .header-container .azad-nav .azad-menus ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          height: 100%;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .azad-header .header-container .azad-nav .azad-menus ul li a {
+            color: var(--text-color);
+            padding: 10px;
+            display: block; }
+
+.azad-footer {
+  background: #ffffff;
+  padding: 1rem 0; }
+  .azad-footer p {
+    margin: 0; }
+/*# sourceMappingURL=style.css.map */
