@@ -212,6 +212,8 @@ html {
 .azad-footer {
   background: #ffffff;
   padding: 1rem 0; }
-  .azad-footer p {
-    margin: 0; }
+  .azad-footer .footer-container {
+    overflow: overlay; }
+    .azad-footer .footer-container p {
+      margin: 0; }
 /*# sourceMappingURL=style.css.map */
