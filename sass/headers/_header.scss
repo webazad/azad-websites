@@ -2,6 +2,10 @@
     border-top:.001rem solid var(--border-top);
     padding: 1rem 0;
     background: var(--white);
+    -webkit-box-shadow: var(--shadow);
+    -ms-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 
     .header-container{
         display:flex;

@@ -41,6 +41,7 @@ address, article, aside, canvas, details, figure, figcaption, footer, header, hg
 *------------------------------------------------------------------------------------------
 */
 :root {
+  --ff:verdana;
   --width:85vw;
   --padding-top:5rem;
   --paddin-bottom:5rem; }
@@ -125,12 +126,17 @@ html {
   --bg:rgba(65,64,66,.8);
   --white:rgba(255,255,255,1);
   --black:rgba(0,0,0,1);
-  --tranparent:rgba(0,0,0,0); }
+  --tranparent:rgba(0,0,0,0);
+  --shadow:0,0,1em rgba(0,0,0,.25);
+  --border-radius:3px; }
 
 .azad-header {
   border-top: 0.001rem solid var(--border-top);
   padding: 1rem 0;
-  background: var(--white); }
+  background: var(--white);
+  -webkit-box-shadow: var(--shadow);
+  -ms-box-shadow: var(--shadow);
+  box-shadow: var(--shadow); }
   .azad-header .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
