@@ -22,7 +22,7 @@ html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite,
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
+  font-size: 1rem;
   vertical-align: baseline;
   font: inherit;
   background: transparent; }
@@ -40,10 +40,15 @@ address, article, aside, canvas, details, figure, figcaption, footer, header, hg
 *	:: GLOBAL STYLE
 *------------------------------------------------------------------------------------------
 */
+:root {
+  --width:85vw;
+  --padding-top:5rem;
+  --paddin-bottom:5rem; }
+
 html {
   background: var(--bg-color); }
   html body {
-    font: 14px/21px "Cabin", Helvetica, Arial, sans-serif;
+    font: 1em/1.25em "Cabin", Helvetica, Arial, sans-serif;
     color: var(--text-color);
     text-align: center;
     -webkit-font-smoothing: antialiased;
@@ -57,12 +62,12 @@ html {
     font-smoothing: antialiased;
     /* Official           */ }
     html body .azad-container {
-      width: 90%;
+      width: var(--width);
       margin: 0 auto; }
     html body .azad-section {
-      padding: 5rem 0; }
+      padding: var(--padding-top) 0; }
     html body h1 {
-      font: 36px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
+      font: 2rem/1.5rem "Cabin", Helvetica, Arial, sans-serif; }
     html body h2, html body h3 {
       font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif; }
     html body h4 {
@@ -110,17 +115,22 @@ html {
       background: #ededed;
       color: #4e4e4e; }
 
+@media only screen and (max-width: 767px) {
+  .azad-section {
+    padding: 3rem 0; } }
+
 :root {
-  --border-top-color: tomato;
-  --text-color: #39e1f5;
-  --bg-color:rgba(65,64,66,.8);
-  --white-color:rgba(255,255,255,1);
-  --black-color:rgba(0,0,0,1); }
+  --border-top: tomato;
+  --text: rgba(57,225,245,1);
+  --bg:rgba(65,64,66,.8);
+  --white:rgba(255,255,255,1);
+  --black:rgba(0,0,0,1);
+  --tranparent:rgba(0,0,0,0); }
 
 .azad-header {
-  border-top: 0.001rem solid var(--border-top-color);
-  padding: 1rem 0px;
-  background: #ffffff; }
+  border-top: 0.001rem solid var(--border-top);
+  padding: 1rem 0;
+  background: var(--white); }
   .azad-header .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,7 +143,7 @@ html {
       width: 100%;
       text-align: left; }
       .azad-header .header-container .logo h1 {
-        line-height: unset; }
+        line-height: 0; }
     .azad-header .header-container .azad-nav {
       width: 100%; }
       .azad-header .header-container .azad-nav .azad-menus {
@@ -150,8 +160,8 @@ html {
               -ms-flex-align: center;
                   align-items: center; }
           .azad-header .header-container .azad-nav .azad-menus ul li a {
-            color: var(--text-color);
-            padding: 10px;
+            color: var(--text);
+            padding: .8rem;
             display: block; }
 
 @media only screen and (max-width: 767px) {
@@ -168,30 +178,30 @@ html {
               justify-content: center; } }
 
 .azad-demo {
-  background: var(--text-color);
-  color: var(--white-color);
+  background: var(--text);
+  color: var(--white);
   text-align: left; }
   .azad-demo h2 {
     margin-bottom: 2rem; }
   .azad-demo a {
     color: blue; }
     .azad-demo a:link {
-      color: var(--white-color); }
+      color: var(--white, yellow); }
     .azad-demo a:hover {
-      color: var(--black-color); }
+      color: var(--black); }
 
 .azad-sites {
-  background: var(--bg-color);
-  color: var(--white-color);
+  background: var(--bg);
+  color: var(--white);
   text-align: left; }
   .azad-sites h2 {
     margin-bottom: 2rem; }
   .azad-sites a {
     color: blue; }
     .azad-sites a:link {
-      color: var(--white-color); }
+      color: var(--white); }
     .azad-sites a:hover {
-      color: var(--black-color); }
+      color: var(--black); }
 
 .azad-footer {
   background: #ffffff;

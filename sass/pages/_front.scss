@@ -1,6 +1,6 @@
 .azad-demo{
-    background: var(--text-color);
-    color:var(--white-color);
+    background: var(--text);
+    color:var(--white);
     text-align:left;
 
     h2{ 
@@ -9,13 +9,13 @@
 
     a{ 
         color: blue; 
-        &:link { color: var(--white-color); }
-        &:hover{color:var(--black-color);}
+        &:link { color: var(--white,yellow); }
+        &:hover{color:var(--black);}
     }    
 }
 .azad-sites{
-    background: var(--bg-color);
-    color:var(--white-color);
+    background: var(--bg);
+    color:var(--white);
     text-align:left;
 
     h2{ 
@@ -24,7 +24,7 @@
 
     a{ 
         color: blue; 
-        &:link { color: var(--white-color); }
-        &:hover{color:var(--black-color);}
+        &:link { color: var(--white); }
+        &:hover{color:var(--black);}
     }    
 }
