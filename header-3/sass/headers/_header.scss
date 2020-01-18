@@ -82,6 +82,7 @@
                         margin: 10px 0;
                         background:var(--white);
                         color:red;
+                        transition: all .5s ease-in-out;
 
                         &:before, &:after{
                             content:'';
@@ -89,25 +90,27 @@
                             width: 100%;
                             height: 100%;
                             position:absolute;
-                            top: -10px;
                             background:var(--white);
+                            transition: all .5s ease-in-out;
+                        }
+                        &:before{
+                            transform:translateY(-10px);
                         }
                         &:after{
-                            top: 10px;
+                            transform:translateY(10px);
                         }
                     }
                 }
                 .burger-button.active{
                     span{
-                        background:none;
-                        &:before,&:after{
-                            top:0;
-                        }
+                        background:transparent;
+                        transform:translateX(-50px);
+
                         &:before{
-                            transform:rotate(45deg);
+                            transform:rotate(45deg) translate(35px,-35px);
                         }
                         &:after{
-                            transform:rotate(135deg);
+                            transform:rotate(-45deg) translate(35px,35px);
                         }
                     }
                 }                                
@@ -118,6 +121,19 @@
         }
         .active{
             display: block;
+            ul{
+                padding-top:1rem;
+                li{
+                    a{
+                        display:inline-block;
+                        text-transform:uppercase;
+                        padding:.5rem 0;
+                        &:hover{
+                            color:red;
+                        }
+                    }
+                }
+            }
         }
     }
 }

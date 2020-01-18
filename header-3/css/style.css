@@ -279,6 +279,8 @@ html body input:focus, html body input:hover {
     margin: 10px 0;
     background: var(--white);
     color: red;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   .azad-header .header-container .logo .burger-button span:before, .azad-header .header-container .logo .burger-button span:after {
     content: '';
@@ -286,31 +288,47 @@ html body input:focus, html body input:hover {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: -10px;
     background: var(--white);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .azad-header .header-container .logo .burger-button span:before {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   .azad-header .header-container .logo .burger-button span:after {
-    top: 10px;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   .azad-header .header-container .logo .burger-button.active span {
-    background: none;
-  }
-  .azad-header .header-container .logo .burger-button.active span:before, .azad-header .header-container .logo .burger-button.active span:after {
-    top: 0;
+    background: transparent;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   .azad-header .header-container .logo .burger-button.active span:before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) translate(35px, -35px);
+            transform: rotate(45deg) translate(35px, -35px);
   }
   .azad-header .header-container .logo .burger-button.active span:after {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    -webkit-transform: rotate(-45deg) translate(35px, 35px);
+            transform: rotate(-45deg) translate(35px, 35px);
   }
   .azad-header .header-container .desktop-menus {
     display: none;
   }
   .azad-header .active {
     display: block;
+  }
+  .azad-header .active ul {
+    padding-top: 1rem;
+  }
+  .azad-header .active ul li a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: .5rem 0;
+  }
+  .azad-header .active ul li a:hover {
+    color: red;
   }
 }
 
