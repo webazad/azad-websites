@@ -214,11 +214,11 @@ html body input:focus, html body input:hover {
   width: 100%;
 }
 
-.azad-header .header-container .azad-nav .azad-menus {
+.azad-header .header-container .azad-nav .desktop-menus {
   height: 100%;
 }
 
-.azad-header .header-container .azad-nav .azad-menus ul {
+.azad-header .header-container .azad-nav .desktop-menus ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,7 +231,7 @@ html body input:focus, html body input:hover {
           align-items: center;
 }
 
-.azad-header .header-container .azad-nav .azad-menus ul li a {
+.azad-header .header-container .azad-nav .desktop-menus ul li a {
   color: var(--text);
   padding: 2rem 1rem;
   display: block;
@@ -239,7 +239,7 @@ html body input:focus, html body input:hover {
   position: relative;
 }
 
-.azad-header .header-container .azad-nav .azad-menus ul li a:after {
+.azad-header .header-container .azad-nav .desktop-menus ul li a:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -255,7 +255,7 @@ html body input:focus, html body input:hover {
   height: 0;
 }
 
-.azad-header .header-container .azad-nav .azad-menus ul li a:hover:after {
+.azad-header .header-container .azad-nav .desktop-menus ul li a:hover:after {
   height: 100%;
   background: rgba(0, 186, 186, 0.1) !important;
 }
@@ -268,9 +268,49 @@ html body input:focus, html body input:hover {
             flex-direction: column;
   }
   .azad-header .header-container .logo {
-    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
   }
-  .azad-header .header-container .azad-nav .azad-menus ul {
+  .azad-header .header-container .logo .burger-button {
+    width: 33px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0%, -50%) rotate(0deg);
+            transform: translate(0%, -50%) rotate(0deg);
+  }
+  .azad-header .header-container .logo .burger-button span {
+    width: 7px;
+    height: 7px;
+    margin: 2px;
+    background: var(--text);
+  }
+  .azad-header .header-container .logo .burger-button span:nth-child(2), .azad-header .header-container .logo .burger-button span:nth-child(3), .azad-header .header-container .logo .burger-button span:nth-child(6) {
+    background: var(--text);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .azad-header .header-container .logo .burger-button:hover span:nth-child(2), .azad-header .header-container .logo .burger-button:hover span:nth-child(3), .azad-header .header-container .logo .burger-button:hover span:nth-child(6) {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+    background: var(--transparent);
+  }
+  .azad-header .header-container .desktop-menus {
+    display: none;
+  }
+  .azad-header .header-container .azad-nav .desktop-menus ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

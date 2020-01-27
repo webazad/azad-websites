@@ -24,7 +24,7 @@
         .azad-nav{
             width: 100%;
 
-            .azad-menus{
+            .desktop-menus{
                 height: 100%;
 
                 ul{
@@ -71,11 +71,47 @@
     .azad-header{
         .header-container{
             flex-direction:column;
-            
-            .logo{text-align:center;}
+
+            .logo{
+                justify-content:center;
+                position:relative;
+
+                .burger-button{
+                    width: 33px;
+                    display:flex;
+                    flex-wrap:wrap;
+                    align-items:center;
+                    position:absolute;
+                    top:50%;
+                    right:0;
+                    transform:translate(0%,-50%) rotate(0deg); 
+
+                    span{
+                        width: 7px;
+                        height: 7px;
+                        margin: 2px;
+                        background:var(--text);
+                    }
+                    span:nth-child(2),span:nth-child(3),span:nth-child(6){
+                        background:var(--text);
+                        transform: translateX(0);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        span:nth-child(2),span:nth-child(3),span:nth-child(6){
+                            transform: translateX(-15px);
+                            background:var(--transparent);
+                        }
+                    }        
+                }
+            }
+
+            .desktop-menus{
+                display: none;
+            }
 
             .azad-nav{
-                .azad-menus{
+                .desktop-menus{
                     ul{
                         justify-content: center;
                     }
