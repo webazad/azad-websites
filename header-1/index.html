@@ -70,7 +70,7 @@
                 </div>                
             </footer><!-- ends footer -->
         </div>
-        <script>
+        <script type="text/javascript">
             var navButton = document.querySelector('.burger-button');
             var navMenu = document.querySelector('.mobile-menus');
             var win = window;
@@ -91,6 +91,16 @@
             }
             navButton.addEventListener('click', openMenu, false);
             win.addEventListener('click',closeMenu, false);
+
+            // selector(".burger-button").addEventListener('click', function(){
+            //     this.classList.toggle('active');                
+            //     selector(".mobile-menus").classList.toggle('active');
+            //     selector(".mobile").classList.toggle('active');
+            // });
+
+            // function selector(s){
+            //     return document.querySelector(s)
+            // }
         </script>
     </body>
 </html>
