@@ -13,7 +13,7 @@ html {
     background: var(--bg-color); 
 
     body { 
-        font: 1rem/1.25rem "Cabin", Helvetica, Arial, sans-serif; 
+        font: 1em/1.25em "Cabin", Helvetica, Arial, sans-serif; 
         color: var(--text-color); 
         text-align: center; 
         -webkit-font-smoothing: antialiased; /* Chrome Suffery     */
@@ -22,9 +22,6 @@ html {
         -o-font-smoothing: antialiased; 	 /* Opera              */
         font-smoothing: antialiased; 		 /* Official           */
 
-        .big-wrapper{
-            overflow:hidden;
-        }
         .azad-container{
             width:var(--width);
             margin:0 auto;

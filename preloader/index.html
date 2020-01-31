@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Header 1</title>
+        <title>Preloader</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+		<!-- PRELOADER BEGINS -->
+        <div class="preloader">
+            <div class="inner">
+                <figure class="logo"><img src="imgs/logo-header.png" alt="Image"></figure>
+                <span class="percentage"></span>
+            </div>
+        </div><!-- ends preloader -->
+        <div class="transition-overlay"></div>
+
         <!-- BIG WRAPPER BEGINS -->
         <div class="big-wrapper">
             <!-- HEADER BEGINS -->
@@ -12,8 +21,21 @@
                 <div class="azad-container">
                     <div class="header-container">
                         <div class="logo">
-                            <h1><a href="../index.html"><img src="imgs/logo-header.png"></a></h1>
-                            <div class="burger-button"><span></span></div>
+                            <h1><a href="index.html"><img src="imgs/logo-header.png"></a></h1>
+                            <!-- burger-menu -->
+                            <!--div-- class="hamburger-menu" id="hamburger-menu">
+                                <div class="burger">
+                                    <svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                        <title>Show / Hide Navigation</title>
+                                        <rect class="burger-svg__base" width="50" height="50"/>
+                                        <g class="burger-svg__bars">
+                                        <rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
+                                        <rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
+                                        <rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
+                                        </g>
+                                    </svg>
+                                </div>                                
+                            </!--div--><!-- end burger --> 
                         </div>
                         <div class="azad-nav">
                             <nav class="desktop-menus">
@@ -70,27 +92,63 @@
                 </div>                
             </footer><!-- ends footer -->
         </div>
+        <script src="js/jquery.min.js"></script>
         <script>
-            var navButton = document.querySelector('.burger-button');
-            var navMenu = document.querySelector('.mobile-menus');
-            var win = window;
+            // var navButton = document.querySelector('.burger-button');
+            // var navMenu = document.querySelector('.mobile-menus');
+            // var win = window;
             
-            function openMenu(event) {
-                navButton.classList.toggle('active');
-                navMenu.classList.toggle('active');
+            // function openMenu(event) {
+            //     navButton.classList.toggle('active');
+            //     navMenu.classList.toggle('active');
                 
-                event.preventDefault();
-                event.stopImmediatePropagation();
-            }
+            //     event.preventDefault();
+            //     event.stopImmediatePropagation();
+            // }
             
-            function closeMenu(event) {
-                if (navButton.classList.contains('active')) {
-                    navButton.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
-            }
-            navButton.addEventListener('click', openMenu, false);
-            win.addEventListener('click',closeMenu, false);
+            // function closeMenu(event) {
+            //     if (navButton.classList.contains('active')) {
+            //         navButton.classList.remove('active');
+            //         navMenu.classList.remove('active');
+            //     }
+            // }
+            // navButton.addEventListener('click', openMenu, false);
+            // win.addEventListener('click',closeMenu, false);
+
+
+            // Preloader
+            (function($){
+                $(document).ready(function() {
+                    
+                "use strict";
+                    
+                // PRELOADER
+                    loader()
+                    function loader(_success) {
+                        var obj = document.querySelector('.preloader'),
+                        inner = document.querySelector('.inner .percentage'),
+                        page = document.querySelector('body');
+                        obj.classList.remove('page-loaded');
+                        page.classList.add('page-loaded');
+                        var w = 0,
+                            t = setInterval(function() {
+                                w = w + 1;
+                                inner.textContent = w;
+                                if (w === 100){
+                                    obj.classList.add('page-loaded');
+                                    page.classList.remove('page-loaded');
+                                    clearInterval(t);
+                                    w = 0;
+                                    if (_success){
+                                        return _success();
+                                    }
+                                }
+                            }, 20);
+                    }  
+                    
+                })
+            })(jQuery);
+            
         </script>
     </body>
 </html>
