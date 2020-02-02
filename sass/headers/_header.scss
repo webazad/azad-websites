@@ -51,7 +51,6 @@
                             width:240px;
                             opacity: 0;
                             visibility: hidden;
-                            transition: all 0.4s ease-in-out;
                             padding:12px 20px;
                             li{
                                 width:100%;
@@ -60,6 +59,7 @@
                                 transition: all 0.4s ease-in-out;
                                 a{
                                     padding: 4px;
+                                    color:red;
                                 }
                             }
                         }
@@ -68,13 +68,13 @@
                                 opacity:1;
                                 visibility:visible;
                                 height:fit-content;
-                                background:var(--black);
+                                background:var(--white);
                                 padding:12px 20px;
                                 li{
                                     padding:7px 7px;                                    
                                     a{
                                         padding:4px;
-                                        color:white;
+                                        color:var(--black);
                                     }
                                     &:hover{
                                         background:blue;

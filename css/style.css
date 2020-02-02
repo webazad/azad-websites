@@ -259,8 +259,6 @@ html body input:focus, html body input:hover {
   width: 240px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   padding: 12px 20px;
 }
 
@@ -274,6 +272,7 @@ html body input:focus, html body input:hover {
 
 .azad-header .header-container .azad-nav .azad-menus ul li ul li a {
   padding: 4px;
+  color: red;
 }
 
 .azad-header .header-container .azad-nav .azad-menus ul li:hover ul {
@@ -282,7 +281,7 @@ html body input:focus, html body input:hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: var(--black);
+  background: var(--white);
   padding: 12px 20px;
 }
 
@@ -292,7 +291,7 @@ html body input:focus, html body input:hover {
 
 .azad-header .header-container .azad-nav .azad-menus ul li:hover ul li a {
   padding: 4px;
-  color: white;
+  color: var(--black);
 }
 
 .azad-header .header-container .azad-nav .azad-menus ul li:hover ul li:hover {
