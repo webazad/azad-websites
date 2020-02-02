@@ -72,20 +72,41 @@
         </div>
         <script>
             
-            const menuBtn = document.querySelector('.burger-button');
-            const navMenu = document.querySelector('.mobile-menus');
-            let menuOpen = false;
-            menuBtn.addEventListener('click',() => {
-                if(!menuOpen){
-                    menuBtn.classList.add('active');
-                    navMenu.classList.add('active');
-                    menuOpen = true;
-                }else{
-                    menuBtn.classList.remove('active');
+            // const menuBtn = document.querySelector('.burger-button');
+            // const navMenu = document.querySelector('.mobile-menus');
+            // let menuOpen = false;
+            // menuBtn.addEventListener('click',() => {
+            //     if(!menuOpen){
+            //         menuBtn.classList.add('active');
+            //         navMenu.classList.add('active');
+            //         menuOpen = true;
+            //     }else{
+            //         menuBtn.classList.remove('active');
+            //         navMenu.classList.remove('active');
+            //         menuOpen = false;
+            //     }
+            // });
+
+            var navButton = document.querySelector('.burger-button');
+            var navMenu = document.querySelector('.mobile-menus');
+            var win = window;
+            
+            function openMenu(event) {
+                navButton.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            }
+            
+            function closeMenu(event) {
+                if (navButton.classList.contains('active')) {
+                    navButton.classList.remove('active');
                     navMenu.classList.remove('active');
-                    menuOpen = false;
                 }
-            });
+            }
+            navButton.addEventListener('click', openMenu, false);
+            win.addEventListener('click',closeMenu, false);
 
         </script>
     </body>
