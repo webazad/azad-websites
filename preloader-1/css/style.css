@@ -382,7 +382,7 @@ html body input:focus, html body input:hover {
   background: rgba(0, 186, 186, 0.1) !important;
 }
 
-.azad-header .mobile-menus {
+.mobile-menus {
   display: none;
 }
 

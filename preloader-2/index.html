@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Preloader 2</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+		<!-- BIG WRAPPER BEGINS -->
+        <div id="container" class="big-wrapper">
+            <!-- HEADER BEGINS -->
+            <header class="azad-header">
+                <div class="azad-container">
+                    <div class="header-container">
+                        <div class="logo">
+                            <h1><a href="index.html"><img src="imgs/logo-header.png"></a></h1>
+                            <!-- burger-menu -->
+                            <!--div class="hamburger-menu" id="hamburger-menu">
+                                <div class="burger">
+                                    <svg id="burger-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                        <title>Show / Hide Navigation</title>
+                                        <rect class="burger-svg__base" width="50" height="50"/>
+                                        <g class="burger-svg__bars">
+                                        <rect class="burger-svg__bar burger-svg__bar-1" x="14" y="18" width="22" height="2"/>
+                                        <rect class="burger-svg__bar burger-svg__bar-2" x="14" y="24" width="22" height="2"/>
+                                        <rect class="burger-svg__bar burger-svg__bar-3" x="14" y="30" width="22" height="2"/>
+                                        </g>
+                                    </svg>
+                                </div>                                
+                            </div--><!-- end burger -->
+                        </div>
+                        <div class="azad-nav">
+                            <nav class="desktop-menus">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>                            
+                        </div>
+                    </div>                    
+                </div>                
+            </header><!-- ends header -->
+            <!-- MOBILE NAVIGATION BEGINS -->
+            <nav class="mobile-menus">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav><!-- ends mobile navigation -->
+            <!-- SECTION BEGINS -->
+            <section class="azad-section azad-demo">
+                <div class="azad-container">
+                    <h2>Demos for Kindergarten School...</h2>
+                    <ol>
+                        <li><a href="https://www.templatemonster.com/demo/54875.html" title="Demo 1" target="_blank">Demo 1</a></li>
+                        <li><a href="http://preview.themeforest.net/item/little-people-kindergarten-wordpress-theme-for-prescool-and-infants-nurseries-and-play-school/full_screen_preview/11494908?ref=athemez&clickthrough_id=1389647478&redirect_back=true" target="_blank" title="Demo 2">Demo 2</a></li>
+                        <li><a href="http://preview.themeforest.net/item/fable-children-kindergarten-wordpress-theme/full_screen_preview/9294431?ref=athemez&clickthrough_id&redirect_back=true" target="_blank" title="Demo 3">Demo 3</a></li>                        
+                    </ol>
+                </div>
+            </section><!-- ends section -->
+            <!-- SECTION BEGINS -->
+            <section class="azad-section azad-sites">
+                <div class="azad-container">
+                    <h2>Completed sites ...</h2>
+                    <ol>
+                        <li><a href="http://www.jcurvemedia.com.au/" target="_blank" title="J-Curve Media">J-Curve Media</a></li>
+                        <li><a href="https://tinkerbellhomecleaning.com/" target="_blank" title="Tinker Bell Home Cleaning">Tinker Bell Home Cleaning</a></li>
+                        <li><a href="http://www.permanentbeautytherapy.com/" target="_blank" title="Permanent Beauty Therapy">Permanent Beauty Therapy</a></li>
+                        <li><a href="http://celluloidsisters.com/" target="_blank" title="Celluloid Sisters">Celluloid Sisters</a></li>                        
+                    </ol>
+                </div>                
+            </section><!-- ends section -->
+            <!-- FOOTER BEGINS -->
+            <div class="azad-footer">
+                <div class="azad-container">
+                    <div class="footer-container">
+                        <p>Copyright 2020 Reserved by Azad</p>
+                    </div>
+                </div>                
+            </footer><!-- ends footer -->
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script>
+
+            // ONLOAD ANIMATION
+            var $inputrevealer = $(
+                '<div class="revealer"><div style="background:#CCF1F1" class="revealer__layer"></div><div style="background:#66D6D6" class="revealer__layer"></div><div style="background:#00baba" class="revealer__layer"></div></div>');
+            $inputrevealer.prependTo($("body"));
+                $('.revealer').toggleClass('revealer--right revealer--animate');
+                $(".revealer").animate(
+                    {
+                        transform : 'translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg) translate3d(0,100%,0)'}, 7000,function() {
+                        $(this).css('opacity','0');
+                });
+
+            setTimeout(
+            function reveal(){
+                $('#container').css('opacity', '1');
+                $('body').css('overflow', 'Visible');
+                $('.revealer').hide();
+            } , 1200);
+            
+        </script>
+    </body>
+</html>
