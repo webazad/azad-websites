@@ -178,7 +178,6 @@ html body input:focus, html body input:hover {
 }
 
 .azad-header {
-  border-top: 0.001rem solid var(--border-top);
   background: var(--white);
   -webkit-box-shadow: var(--shadow);
   -ms-box-shadow: var(--shadow);
@@ -325,6 +324,7 @@ html body input:focus, html body input:hover {
   background: var(--text);
   color: var(--white);
   text-align: left;
+  marign-top: 84px;
 }
 
 .azad-demo h2 {
