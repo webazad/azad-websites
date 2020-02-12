@@ -423,6 +423,17 @@ html body input:focus, html body input:hover {
   color: var(--black);
 }
 
+.azad-demo .azad-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.azad-demo .azad-flex .azad-flex-item {
+  width: 100%;
+  background: black;
+}
+
 .azad-sites {
   background: var(--bg);
   color: var(--white);

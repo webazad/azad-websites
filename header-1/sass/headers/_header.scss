@@ -80,7 +80,7 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px){
     .azad-header{
         padding: 1rem 0;
         perspective:75rem;
