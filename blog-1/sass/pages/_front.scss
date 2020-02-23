@@ -1,0 +1,115 @@
+.azad-demo{
+    background: var(--text);
+    color:var(--white);
+    text-align:left;
+
+    h2{ 
+        margin-bottom:2rem;
+    }
+
+    a{ 
+        color: blue; 
+        &:link { color: var(--white,yellow); }
+        &:hover{color:var(--black);}
+    }
+    .azad-flex{
+        display:flex;
+
+        .azad-flex-item{
+            width:100%;
+            background:black;
+        }
+    } 
+}
+.azad-shrink{
+    background:tomato;
+    .azad-flex{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        .azad-flex-item{
+            width:49.5%;
+            height:600px;
+            text-align:left;
+            margin-bottom:1%;
+            background-image:url('../imgs/Riby-Mobile-App-screen.jpg');
+            background-size:cover;
+            background-position:50%;
+            background-repeat:no-repeat;
+            transition:all .8s;
+            &:hover{
+                transform:scale3d(.91,.91,.91);
+            }
+            a{
+                height:100%;
+                display:block;
+                padding:50px;
+                box-sizing:border-box;
+            }
+            h2, p{
+                color:white;
+            }
+            h2{
+                margin-bottom:2rem;
+            }
+            p{
+                color:white;
+            }
+        }
+    }
+}
+.azad-sites{
+    background: var(--bg);
+    color:var(--white);
+    text-align:left;
+
+    h2{ 
+        margin-bottom:2rem;
+    }
+
+    a{ 
+        color: blue; 
+        &:link { color: var(--white); }
+        &:hover{color:var(--black);}
+    }    
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px){
+    .azad-shrink{
+        background:tomato;
+        .azad-flex{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            .azad-flex-item{
+                width:100%;
+                height:400px;
+                text-align:left;
+                margin-bottom:3%;
+                background-image:url('../imgs/Riby-Mobile-App-screen.jpg');
+                background-size:cover;
+                background-position:50%;
+                background-repeat:no-repeat;
+                transition:all .8s;
+                &:hover{
+                    transform:scale3d(1,1,1);
+                }
+                a{
+                    height:100%;
+                    display:block;
+                    padding:50px;
+                    box-sizing:border-box;
+                }
+                h2, p{
+                    color:white;
+                }
+                h2{
+                    margin-bottom:2rem;
+                }
+                p{
+                    color:white;
+                }
+            }
+        }
+    }    
+}

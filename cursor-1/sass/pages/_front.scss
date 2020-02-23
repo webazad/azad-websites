@@ -1,0 +1,38 @@
+.azad-demo{
+    background: var(--text);
+    color:var(--white);
+    text-align:left;
+
+    h2{ 
+        margin-bottom:2rem;
+    }
+
+    a{ 
+        color: blue; 
+        &:link { color: var(--white,yellow); }
+        &:hover{color:var(--black);}
+    }
+    .azad-flex{
+        display:flex;
+
+        .azad-flex-item{
+            width:100%;
+            background:black;
+        }
+    } 
+}
+.azad-sites{
+    background: var(--bg);
+    color:var(--white);
+    text-align:left;
+
+    h2{ 
+        margin-bottom:2rem;
+    }
+
+    a{ 
+        color: blue; 
+        &:link { color: var(--white); }
+        &:hover{color:var(--black);}
+    }    
+}
