@@ -244,40 +244,99 @@ html body input:focus, html body input:hover {
           align-items: center;
 }
 
+.azad-header .header-container .azad-nav .desktop-menus ul li {
+  position: relative;
+}
+
 .azad-header .header-container .azad-nav .desktop-menus ul li a {
   color: var(--text);
   padding: 2rem 1rem;
   display: block;
-  text-decoration: none;
-  position: relative;
 }
 
-.azad-header .header-container .azad-nav .desktop-menus ul li a:after {
-  content: '';
+.azad-header .header-container .azad-nav .desktop-menus ul li.current a {
+  text-decoration: underline;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul {
+  background: #000;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.7rem;
+  opacity: 0;
+  padding: 1rem 0;
   position: absolute;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-          transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  background: var(--text);
-  height: 0;
+  right: 9999rem;
+  _top: calc(100% + 2rem);
+  -webkit-transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+  transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+  width: 20rem;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
 }
 
-.azad-header .header-container .azad-nav .desktop-menus ul li a:hover:after {
-  height: 100%;
-  background: rgba(0, 186, 186, 0.1) !important;
+.azad-header .header-container .azad-nav .desktop-menus ul li ul:before, .azad-header .header-container .azad-nav .desktop-menus ul li ul:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul:before {
+  height: 2rem;
+  left: 0;
+  right: 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul:after {
+  border: 0.8rem solid transparent;
+  border-bottom-color: #000;
+  right: 1.8rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li {
+  _position: relative;
+  padding: .3rem 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li a {
+  text-decoration: none !important;
+  font-size: 18px;
+  display: block;
+  padding: .5rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li a:hover {
+  text-decoration: underline !important;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li:hover ul {
+  right: 0;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear, -webkit-transform 0.15s linear;
 }
 
 .azad-header .mobile-menus {
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .azad-header {
     padding: 1rem 0;
     -webkit-perspective: 75rem;
