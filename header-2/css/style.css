@@ -193,10 +193,13 @@ html body input:focus, html body input:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .azad-header .header-container .logo {
-  width: 100%;
   text-align: left;
   position: relative;
   display: -webkit-box;
@@ -220,53 +223,139 @@ html body input:focus, html body input:hover {
 }
 
 .azad-header .header-container .azad-nav {
-  width: 100%;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul {
+  opacity: 0;
+  right: 9999rem;
+  position: absolute;
+  background: #000000;
+  border-radius: 0.4rem;
+  width: 12rem;
+  padding: 1rem 0;
+  top: calc(100% + 2rem);
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+  -webkit-transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+  transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
+  z-index: 1;
+  color: #fff;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li a {
+  color: white;
+  padding: .5rem 1rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li a:hover {
+  text-decoration: underline;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li:hover ul {
+  position: absolute;
+  top: calc( -100% + 0.8rem) !important;
+  right: calc( 100% + 2rem) !important;
+  display: block !important;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li:hover ul:before, .azad-header .header-container .azad-nav .desktop-menus ul ul li:hover ul:after {
+  bottom: 0;
+  height: auto;
+  left: auto;
+  right: -2rem;
+  top: 0;
+  width: 2rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li:hover ul:before {
+  bottom: 0;
+  height: auto;
+  left: auto;
+  right: -2rem;
+  top: 0;
+  width: 2rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul li:hover ul:after {
+  border-bottom-color: transparent;
+  /*rtl:ignore*/
+  border-left-color: #000;
+  bottom: auto;
+  right: -3.2rem;
+  top: 2rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul:before, .azad-header .header-container .azad-nav .desktop-menus ul ul:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul:before {
+  height: 2rem;
+  left: 0;
+  right: 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul:after {
+  border: 0.6rem solid transparent;
+  border-bottom-color: #000;
+  right: 1.8rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul ul ul {
+  display: none;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li {
+  position: relative;
+  line-height: 1.25;
+  margin: 0rem 0 0 2.5rem;
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li a {
   color: var(--text);
-  padding: 2rem 1rem;
   display: block;
   text-decoration: none;
-  position: relative;
 }
 
-.azad-header .header-container .azad-nav .desktop-menus ul li a:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+.azad-header .header-container .azad-nav .desktop-menus ul li a:hover {
+  text-decoration: underline;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li:hover ul {
   right: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-          transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  background: var(--text);
-  height: 0;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus ul li a:hover:after {
-  height: 100%;
-  background: rgba(0, 186, 186, 0.1) !important;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear, -webkit-transform 0.15s linear;
 }
 
 .azad-header .mobile-menus {

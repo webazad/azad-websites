@@ -9,9 +9,10 @@
     .header-container{
         display:flex;
         flex-direction:row;
+        justify-content:space-between;
+        padding: 1rem 0;
 
         .logo{
-            width: 100%;
             text-align:left;
             position:relative;
             display:flex;
@@ -29,44 +30,106 @@
         }
 
         .azad-nav{
-            width: 100%;
-
+            display:flex;
+            align-items:center;
             .desktop-menus{
-                height: 100%;
-
                 ul{
                     display: flex;
-                    justify-content: flex-end;
-                    height:100%;
-                    align-items: center;
-
+                    flex-wrap:wrap;
+                    text-align: left;
+                    ul{
+                        opacity:0;
+                        right:9999rem;
+                        position:absolute;
+                        background:#000000;
+                        border-radius: 0.4rem;
+                        width:12rem;
+                        padding: 1rem 0;
+                        top: calc(100% + 2rem);
+                        transform: translateY(0.6rem);
+                        transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+                        z-index: 1;
+                        color: #fff;
+                        li{
+                            margin:0;
+                            width:100%;
+                            position: relative;
+                            a{
+                                color:white;
+                                padding:.5rem 1rem;
+                                &:hover{
+                                    text-decoration:underline;
+                                }
+                            }
+                            &:hover ul{
+                                position:absolute;
+                                top: calc( -100% + 0.8rem ) !important;
+                                right: calc( 100% + 2rem ) !important;
+                                display: block !important;
+                                &:before, &:after{
+                                    bottom: 0;
+                                    height: auto;
+                                    left: auto;
+                                    right: -2rem;
+                                    top: 0;
+                                    width: 2rem;
+                                }
+                                &:before{
+                                    bottom: 0;
+                                    height: auto;
+                                    left: auto;
+                                    right: -2rem;
+                                    top: 0;
+                                    width: 2rem;
+                                }
+                                &:after{
+                                    border-bottom-color: transparent;
+                                    /*rtl:ignore*/
+                                    border-left-color: #000;
+                                    bottom: auto;
+                                    right: -3.2rem;
+                                    top: 2rem;
+                                }
+                            }
+                        }
+                        &:before, &:after{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            bottom: 100%;
+                        }
+                        &:before{
+                            height: 2rem;
+                            left: 0;
+                            right: 0;
+                        }
+                        &:after{
+                            border: 0.6rem solid transparent;
+                            border-bottom-color: #000;
+                            right: 1.8rem;
+                        }
+                        ul{
+                            display: none;
+                        }
+                    }
                     li{
+                        position:relative;
+                        line-height:1.25;
+                        margin: 0rem 0 0 2.5rem;
                         a{
                             color: var(--text);
-                            padding: 2rem 1rem;
                             display: block;
                             text-decoration: none;
-                            position: relative;
-
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                width: 100%;
-                                bottom: 0;
-                                right: 0;
-                                transform: translate3d(0,0,0);
-                                transition: all .4s;
-                                transition-timing-function: cubic-bezier(.7,0,.3,1);
-                                background: var(--text);
-                                height: 0;
+                            &:hover{
+                                text-decoration:underline;
                             }
-                            &:hover {
-                                &:after {
-                                    height: 100%;
-                                    background: rgba(0,186,186,0.1)!important;
-                                }                            
-                            }
-                        }                        
+                        }
+                        &:hover ul{
+                            right:0;
+                            opacity:1;
+                            transform: translateY(0);
+	                        transition: opacity 0.15s linear, transform 0.15s linear;
+                        }                       
                     }
                 }
             }            
