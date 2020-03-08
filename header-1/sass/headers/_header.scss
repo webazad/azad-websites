@@ -7,15 +7,14 @@
     box-shadow: var(--shadow);
 
     .header-container{
-        display:flex;
-        flex-direction:row;
+        display: flex;
+        justify-content: space-between;
 
         .logo{
-            width: 100%;
-            text-align:left;
-            position:relative;
-            display:flex;
-            align-items:center;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
 
             h1{
                 line-height:0;
@@ -32,45 +31,67 @@
         }
 
         .azad-nav{
-            width: 100%;
-
+            display:flex;
+            align-items: center;
             .desktop-menus{
-                height: 100%;
-
                 ul{
                     display: flex;
-                    justify-content: flex-end;
-                    height:100%;
+                    flex-wrap: wrap;
+	                justify-content: flex-end;
                     align-items: center;
                     
                     li{
-                        position:relative;
+                        position: relative;
                         a{
                             color: var(--text);
-                            padding: 2rem 1rem;
+                            padding: 0rem 1rem;
                             display: block;
-                        }
-                        &.current a{
-                            text-decoration: underline;
+                            width: 100%;
                         }
                         ul{
                             background: #000;
                             border-radius: 0.4rem;
                             color: #fff;
-                            font-size: 1.7rem;
+                            font-size: 1rem;
                             opacity: 0;
                             padding: 1rem 0;
                             position: absolute;
                             right: 9999rem;
-                            _top: calc(100% + 2rem);
+                            top: calc(100% + 2rem);
                             transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
                             transform: translateY(0.6rem);
-                            width: 20rem;
+                            width: 10rem;
                             z-index: 1;
-                            display:flex;
-                            flex-direction:column;
-                            height: auto;
-                            &:before,&:after {
+                            display: initial;
+
+                            li{
+                                a{
+                                    padding: .5rem 0;
+                                }
+                                &:hover ul{
+                                    right: calc(100% + 2rem);
+                                }
+                                ul{
+                                    top: -1rem;
+                                    &:before{
+                                        top: 0;
+                                        height: auto;
+                                        width: 2rem;
+                                        left: auto;
+                                        right: -2rem;
+                                        bottom: 0;
+                                    }
+                                    &:after{
+                                        border-bottom-color: transparent;
+                                        border-left-color: #000000;
+                                        top: 1.5rem;
+                                        right: -1.2rem;
+                                        bottom: auto;
+                                    }
+                                }
+                            }
+
+                            &:before, &:after {
                                 content: "";
                                 display: block;
                                 position: absolute;
@@ -82,25 +103,12 @@
                                 right: 0;
                             }
                             &:after {
-                                border: 0.8rem solid transparent;
+                                border: 0.6rem solid transparent;
                                 border-bottom-color: #000;
                                 right: 1.8rem;
                             }
-                            li{
-                                _position:relative;
-                                padding: .3rem 0;
-                                a{
-                                    text-decoration: none !important;
-                                    font-size: 18px;
-                                    display:block;
-                                    padding: .5rem;
-                                    &:hover{
-                                        text-decoration: underline !important;
-                                    }
-                                }
-                            }
                         }
-                        &:hover ul{
+                        &:hover > ul{
                             right: 0;
                             opacity: 1;
                             transform: translateY(0);

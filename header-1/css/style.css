@@ -189,14 +189,12 @@ html body input:focus, html body input:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .azad-header .header-container .logo {
-  width: 100%;
   text-align: left;
   position: relative;
   display: -webkit-box;
@@ -224,21 +222,23 @@ html body input:focus, html body input:hover {
 }
 
 .azad-header .header-container .azad-nav {
-  width: 100%;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -250,40 +250,59 @@ html body input:focus, html body input:hover {
 
 .azad-header .header-container .azad-nav .desktop-menus ul li a {
   color: var(--text);
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   display: block;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus ul li.current a {
-  text-decoration: underline;
+  width: 100%;
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul {
   background: #000;
   border-radius: 0.4rem;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1rem;
   opacity: 0;
   padding: 1rem 0;
   position: absolute;
   right: 9999rem;
-  _top: calc(100% + 2rem);
+  top: calc(100% + 2rem);
   -webkit-transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
   transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
   transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
   transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
-  width: 20rem;
+  width: 10rem;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: initial;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li a {
+  padding: .5rem 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li:hover ul {
+  right: calc(100% + 2rem);
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li ul {
+  top: -1rem;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li ul:before {
+  top: 0;
   height: auto;
+  width: 2rem;
+  left: auto;
+  right: -2rem;
+  bottom: 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li ul li ul:after {
+  border-bottom-color: transparent;
+  border-left-color: #000000;
+  top: 1.5rem;
+  right: -1.2rem;
+  bottom: auto;
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul:before, .azad-header .header-container .azad-nav .desktop-menus ul li ul:after {
@@ -300,28 +319,12 @@ html body input:focus, html body input:hover {
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul:after {
-  border: 0.8rem solid transparent;
+  border: 0.6rem solid transparent;
   border-bottom-color: #000;
   right: 1.8rem;
 }
 
-.azad-header .header-container .azad-nav .desktop-menus ul li ul li {
-  _position: relative;
-  padding: .3rem 0;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus ul li ul li a {
-  text-decoration: none !important;
-  font-size: 18px;
-  display: block;
-  padding: .5rem;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus ul li ul li a:hover {
-  text-decoration: underline !important;
-}
-
-.azad-header .header-container .azad-nav .desktop-menus ul li:hover ul {
+.azad-header .header-container .azad-nav .desktop-menus ul li:hover > ul {
   right: 0;
   opacity: 1;
   -webkit-transform: translateY(0);

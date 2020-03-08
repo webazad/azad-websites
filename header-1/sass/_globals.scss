@@ -56,3 +56,38 @@ html {
     }
 }
 
+
+// ul{
+//   display: flex;
+// }
+// ul li{
+//   position: relative;
+// }
+// ul ul{
+//   background: #000;
+// 	border-radius: 0.4rem;
+// 	color: #fff;
+// 	font-size: 1.7rem;
+// 	opacity: 0;
+// 	padding: 1rem 0;
+// 	position: absolute;
+// 	right: 9999rem;
+// 	top: calc(100% + 2rem);
+// 	transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+// 	transform: translateY(0.6rem);
+// 	width: 20rem;
+//   z-index: 1;
+  
+//   display:flex;
+//   flex-direction:column;
+// }
+// ul li:hover > ul{
+//   right: 0;
+// 	opacity: 1;
+// 	transform: translateY(0);
+// 	transition: opacity 0.15s linear, transform 0.15s linear;
+// }
+// ul ul li:hover > ul{
+//   right: calc(100% + 2rem);
+// }
+
