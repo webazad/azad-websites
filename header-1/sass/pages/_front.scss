@@ -1,23 +1,95 @@
-.azad-demo{
+.azad-demo {
     background: var(--text);
     color:var(--white);
     text-align:left;
 
-    h2{ 
+    h2 { 
         margin-bottom:2rem;
     }
 
-    a{ 
+    a { 
         color: blue; 
         &:link { color: var(--white,yellow); }
         &:hover{color:var(--black);}
     }
-    .azad-flex{
+    .azad-flex {
         display:flex;
 
-        .azad-flex-item{
+        .azad-flex-item {
             width:100%;
             background:black;
+            padding: 20px;
+
+            ul {
+                background: white;
+                margin: 3rem 0;
+                padding: 20px 0;
+                list-style: disc;
+                color: black;
+                li {
+                    position: relative;
+                    margin: 0 2.5rem 0;
+
+                    &:before {
+                        content: '';
+                        width: 1px;
+                        height: 13px;
+                        display: block;
+                        background: rgba(145,145,145,.49);
+                        position: absolute;
+                        top: 14px;
+                        left: -14px;
+                    }
+                    &:last-child{
+                        &:before{
+                            height: 0 !important;
+                        }
+                    }
+                    a{
+                        color:black;
+                        &:hover{
+                            color: blue;
+                        }
+                    }
+                }
+            }
+            ol {
+                counter-reset: li;
+                background: white;
+                margin: 3rem 0;
+                padding: 20px 0;
+                color: black;
+                li {
+                    position: relative;
+                    margin: 0 3rem 0;
+                    padding: 0 2rem 1rem;
+                    border-left: .5px solid #dfdfdf;
+                    &:before {
+                        counter-increment: li 1;
+                        content: counter(li, decimal);
+                        width: 2rem;
+                        height: 2rem;
+                        line-height: 2rem;
+                        display: block;
+                        border: .5px solid #dfdfdf;
+                        background: #fff;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: -6px;
+                        left: -1.1rem;
+                        text-align: center;
+                    }
+                    &:last-child{
+                        padding-bottom:0;
+                    }
+                    a{
+                        color:black;
+                        &:hover{
+                            color: blue;
+                        }
+                    }
+                }
+            }
         }
     } 
 }
