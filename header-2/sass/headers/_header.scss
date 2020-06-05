@@ -1,72 +1,72 @@
-.azad-header{
-    border-top:.001rem solid var(--border-top);
-    background: var(--white);
-    -webkit-box-shadow: var(--shadow);
-    -ms-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
+.azad-header {
+    border-top:.001rem solid var( --border-top );
+    background: var( --white );
+    -webkit-box-shadow: var( --shadow );
+    -ms-box-shadow: var( --shadow );
+    -moz-box-shadow: var( --shadow );
+    box-shadow: var( --shadow );
 
-    .header-container{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         padding: 1rem 0;
 
-        .logo{
-            text-align:left;
-            position:relative;
-            display:flex;
-            align-items:center;
+        .logo {
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
 
-            h1{
-                line-height:0;
-                a{
+            h1 {
+                line-height: 0;
+                a {
                     display: inline-block;
                 }
             }
-            .burger-button{
+            .burger-button {
                 display: none;
             }
         }
 
-        .azad-nav{
-            display:flex;
-            align-items:center;
-            .desktop-menus{
-                ul{
+        .azad-nav {
+            display: flex;
+            align-items: center;
+            .desktop-menus {
+                ul {
                     display: flex;
-                    flex-wrap:wrap;
+                    flex-wrap: wrap;
                     text-align: left;
-                    ul{
-                        opacity:0;
-                        right:9999rem;
-                        position:absolute;
-                        background:#000000;
+                    ul {
+                        opacity: 0;
+                        right: 9999rem;
+                        position: absolute;
+                        background: #000000;
                         border-radius: 0.4rem;
-                        width:12rem;
+                        width: 12rem;
                         padding: 1rem 0;
-                        top: calc(100% + 2rem);
-                        transform: translateY(0.6rem);
+                        top: calc( 100% + 2rem );
+                        transform: translateY( 0.6rem );
                         transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
                         z-index: 1;
                         color: #fff;
-                        li{
-                            margin:0;
-                            width:100%;
+                        li {
+                            margin: 0;
+                            width: 100%;
                             position: relative;
-                            a{
-                                color:white;
-                                padding:.5rem 1rem;
-                                &:hover{
-                                    text-decoration:underline;
+                            a {
+                                color: white;
+                                padding: .5rem 1rem;
+                                &:hover {
+                                    text-decoration: underline;
                                 }
                             }
-                            &:hover ul{
-                                position:absolute;
+                            &:hover ul {
+                                position: absolute;
                                 top: calc( -100% + 0.8rem ) !important;
                                 right: calc( 100% + 2rem ) !important;
                                 display: block !important;
-                                &:before, &:after{
+                                &:before, &:after {
                                     bottom: 0;
                                     height: auto;
                                     left: auto;
@@ -74,7 +74,7 @@
                                     top: 0;
                                     width: 2rem;
                                 }
-                                &:before{
+                                &:before {
                                     bottom: 0;
                                     height: auto;
                                     left: auto;
@@ -82,7 +82,7 @@
                                     top: 0;
                                     width: 2rem;
                                 }
-                                &:after{
+                                &:after {
                                     border-bottom-color: transparent;
                                     /*rtl:ignore*/
                                     border-left-color: #000;
@@ -92,42 +92,42 @@
                                 }
                             }
                         }
-                        &:before, &:after{
+                        &:before, &:after {
                             content: "";
                             display: block;
                             position: absolute;
                             bottom: 100%;
                         }
-                        &:before{
+                        &:before {
                             height: 2rem;
                             left: 0;
                             right: 0;
                         }
-                        &:after{
+                        &:after {
                             border: 0.6rem solid transparent;
                             border-bottom-color: #000;
                             right: 1.8rem;
                         }
-                        ul{
+                        ul {
                             display: none;
                         }
                     }
-                    li{
-                        position:relative;
-                        line-height:1.25;
+                    li {
+                        position: relative;
+                        line-height: 1.25;
                         margin: 0rem 0 0 2.5rem;
-                        a{
-                            color: var(--text);
+                        a {
+                            color: var( --text );
                             display: block;
                             text-decoration: none;
-                            &:hover{
-                                text-decoration:underline;
+                            &:hover {
+                                text-decoration: underline;
                             }
                         }
-                        &:hover ul{
-                            right:0;
-                            opacity:1;
-                            transform: translateY(0);
+                        &:hover ul {
+                            right: 0;
+                            opacity: 1;
+                            transform: translateY( 0 );
 	                        transition: opacity 0.15s linear, transform 0.15s linear;
                         }                       
                     }
@@ -135,96 +135,96 @@
             }            
         }
     }
-    .mobile-menus{
+    .mobile-menus {
         display: none;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .azad-header{
-        border-bottom: 1px solid var(--black);
-        .header-container{
-            flex-direction:column;            
-            .logo{
-                text-align:center;
-                position:relative;
+@media only screen and ( max-width: 767px ) {
+    .azad-header {
+        border-bottom: 1px solid var( --black );
+        .header-container {
+            flex-direction: column;            
+            .logo {
+                text-align: center;
+                position: relative;
 
-                .burger-button{
-                    padding:5px;
+                .burger-button {
+                    padding: 5px;
                     border-radius: 4px;
-                    background:var(--text);
+                    background: var( --text );
                     width: 26px;
-                    display:flex;
-                    position:absolute;
-                    top:50%;
-                    right:0;
-                    transform:translate(0%,-50%);
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate( 0%, -50% );
                     transition:all .5s;
 
-                    span{
-                        position:relative;
+                    span {
+                        position: relative;
                         width: 100%;
                         height: 4px;
                         margin: 10px 0;
-                        background:var(--white);
-                        color:red;
-                        border-radius:3px;
+                        background: var( --white );
+                        color: red;
+                        border-radius: 3px;
 
-                        &:before, &:after{
-                            border-radius:3px;
-                            content:'';
-                            display:block;
+                        &:before, &:after {
+                            border-radius: 3px;
+                            content: '';
+                            display: block;
                             width: 100%;
                             height: 100%;
-                            position:absolute;
-                            background:var(--white);
+                            position: absolute;
+                            background: var( --white );
                         }
-                        &:before{
-                            transform: translateY(10px);
+                        &:before {
+                            transform: translateY( 10px );
                         }
-                        &:after{
-                            transform: translateY(-10px);
+                        &:after {
+                            transform: translateY( -10px );
                         }
                     }
                 }
-                .burger-button.active{
-                    span{
-                        background:none;
-                        &:before,&:after{
-                            top:0;
+                .burger-button.active {
+                    span {
+                        background: none;
+                        &:before, &:after {
+                            top: 0;
                         }
-                        &:before{
-                            transform:rotate(45deg);
+                        &:before {
+                            transform: rotate( 45deg );
                         }
-                        &:after{
-                            transform:rotate(135deg);
+                        &:after {
+                            transform: rotate( 135deg );
                         }
                     }
                 }                                
             }
-            .desktop-menus{
+            .desktop-menus {
                 display: none;
             }
         }
-        .active{
+        .active {
             display: block;
-            ul{
+            ul {
                 margin-top: 1rem;
-                li{
+                li {
                     margin-bottom:.5rem;
-                    a{
-                        padding:.2rem 0;
-                        display:inline-block;
-                        text-transform:uppercase;
-                        position:relative;
-                        &:before{
-                            content:'';
-                            position:absolute;
-                            width:10px;
-                            height:10px;
-                            background:var(--text);
-                            top:-4px;
-                            left:-10px;
+                    a {
+                        padding: .2rem 0;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        position: relative;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            background: var( --text );
+                            top: -4px;
+                            left: -10px;
                         }
                     }
                 }

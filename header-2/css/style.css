@@ -43,10 +43,10 @@ address, article, aside, canvas, details, figure, figcaption, footer, header, hg
 *------------------------------------------------------------------------------------------
 */
 :root {
-  --ff:verdana;
-  --width:85vw;
-  --padding-top:5rem;
-  --paddin-bottom:5rem;
+  --ff: verdana;
+  --width: 85vw;
+  --padding-top: 5rem;
+  --paddin-bottom: 5rem;
 }
 
 html {
@@ -248,7 +248,7 @@ html body input:focus, html body input:hover {
   border-radius: 0.4rem;
   width: 12rem;
   padding: 1rem 0;
-  top: calc(100% + 2rem);
+  top: calc( 100% + 2rem);
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
   -webkit-transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
