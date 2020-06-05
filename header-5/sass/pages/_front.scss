@@ -1,31 +1,40 @@
-.azad-demo{
-    background: var(--text);
-    color:var(--white);
-    text-align:left;
-    marign-top:84px;
+.azad-demo {
+    background: var( --text );
+    color: var( --white );
+    text-align: left;
+    marign-top: 84px;
 
-    h2{ 
-        margin-bottom:2rem;
+    h2 { 
+        margin-bottom: 2rem;
     }
 
-    a{ 
+    a { 
         color: blue; 
-        &:link { color: var(--white,yellow); }
-        &:hover{color:var(--black);}
+        &:link {
+            color: var( --white, yellow );
+        }
+        &:hover {
+            color: var( --black );
+        }
     }    
 }
-.azad-sites{
-    background: var(--bg);
-    color:var(--white);
-    text-align:left;
 
-    h2{ 
-        margin-bottom:2rem;
+.azad-sites {
+    background: var( --bg );
+    color: var( --white );
+    text-align: left;
+
+    h2 { 
+        margin-bottom: 2rem;
     }
 
-    a{ 
+    a { 
         color: blue; 
-        &:link { color: var(--white); }
-        &:hover{color:var(--black);}
+        &:link {
+            color: var( --white );
+        }
+        &:hover {
+            color: var( --black );
+        }
     }    
 }

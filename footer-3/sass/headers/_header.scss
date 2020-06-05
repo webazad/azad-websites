@@ -1,52 +1,52 @@
-.azad-header{
-    border-top:.001rem solid var(--border-top);
-    background: var(--white);
-    -webkit-box-shadow: var(--shadow);
-    -ms-box-shadow: var(--shadow);
-    -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
+.azad-header {
+    border-top: .001rem solid var( --border-top );
+    background: var( --white );
+    -webkit-box-shadow: var( --shadow );
+    -ms-box-shadow: var( --shadow );
+    -moz-box-shadow: var( --shadow );
+    box-shadow: var( --shadow );
 
-    .header-container{
-        display:flex;
-        flex-direction:row;
+    .header-container {
+        display: flex;
+        flex-direction: row;
 
-        .logo{
+        .logo {
             width: 100%;
-            text-align:left;
-            position:relative;
-            display:flex;
-            align-items:center;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
 
-            h1{
-                line-height:0;
-                a{
+            h1 {
+                line-height: 0;
+                a {
                     display: inline-block;
                 }
             }
-            .burger-button{
+            .burger-button {
                 display: none;
             }
         }
 
-        .azad-nav{
+        .azad-nav {
             width: 100%;
 
-            .desktop-menus{
+            .desktop-menus {
                 height: 100%;
 
-                ul{
+                ul {
                     display: flex;
                     justify-content: flex-end;
-                    height:100%;
+                    height: 100%;
                     align-items: center;
 
-                    li{
-                        a{
-                            color: var(--text);
+                    li {
+                        a {
+                            color: var( --text );
                             padding: 2rem 1rem;
                             display: block;
                             text-decoration: none;
-                            position:relative;
+                            position: relative;
 
                             &:after {
                                 content: '';
@@ -54,16 +54,16 @@
                                 width: 100%;
                                 bottom: 0;
                                 right: 0;
-                                transform: translate3d(0,0,0);
+                                transform: translate3d( 0, 0, 0 );
                                 transition: all .4s;
-                                transition-timing-function: cubic-bezier(.7,0,.3,1);
-                                background: var(--text);
+                                transition-timing-function: cubic-bezier( .7, 0, .3, 1 );
+                                background: var( --text );
                                 height: 0;
                             }
                             &:hover {
                                 &:after {
                                     height: 100%;
-                                    background: rgba(255,99,71,0.1) !important;
+                                    background: rgba( 255, 99, 71, 0.1 ) !important;
                                 }                            
                             }
                         }
@@ -72,90 +72,95 @@
             }            
         }
     }
-    .mobile-menus{
+    .mobile-menus {
         display: none;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .azad-header{
-        .header-container{
-            flex-direction:column;            
-            .logo{
-                text-align:center;
-                position:relative;
+@media only screen and ( max-width: 767px ),
+only screen and ( max-device-width: 767px ) {
+    .azad-header {
+        .header-container {
+            flex-direction: column;            
+            .logo {
+                text-align: center;
+                position: relative;
 
-                .burger-button{
+                .burger-button {
                     width: 40px;
-                    display:flex;
-                    position:absolute;
-                    top:50%;
-                    right:0;
-                    transform:translate(0%,-50%);
-                    transition:all .5s;
-                    flex-direction:row;
-                    flex-wrap:wrap;
-                    align-items:center;
-                    justify-content:center;
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate( 0%, -50% );
+                    transition: all .5s;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
 
-                    span{
+                    span {
                         width: 5px;
                         height: 5px;
-                        margin:2.5px;
-                        background:var(--text);
+                        margin: 2.5px;
+                        background: var( --text );
                     }
-                    span:nth-child(5),span:nth-child(8){
-                        background:var(--text);
-                        transform: translateX(0);
+                    span:nth-child( 5 ),
+                    span:nth-child( 8 ) {
+                        background: var( --text );
+                        transform: translateX( 0 );
                         transition: all 0.3s ease-in-out;
                     }
-                    span:nth-child(13),span:nth-child(16){
-                        background:var(--text);
-                        transform: translateX(0);
+                    span:nth-child( 1 3),
+                    span:nth-child( 16 ) {
+                        background: var( --text );
+                        transform: translateX( 0 );
                         transition: all 0.3s ease-in-out 0.3s;
                     }
-                    &:hover{
-                        span:nth-child(5),span:nth-child(13){
-                            transform: translateX(-15px);
-                            background:var(--white);
+                    &:hover {
+                        span:nth-child( 5 ),
+                        span:nth-child( 13 ) {
+                            transform: translateX( -15px );
+                            background: var( --white );
                         }
-                        span:nth-child(8),span:nth-child(16){
-                            transform: translateX(15px);
-                            background:var(--white);
+                        span:nth-child( 8 ),
+                        span:nth-child( 16 ) {
+                            transform: translateX( 15px );
+                            background: var( --white );
                         }
                     }
                 }                            
             }
-            .desktop-menus{
+            .desktop-menus {
                 display: none;
             }
         }
-        .mobile-menus{
-            opacity:0;
+        .mobile-menus {
+            opacity: 0;
         }
-        .mobile-menus.active{
+        .mobile-menus.active {
             display: block;
-            background:#040404;
-            position:fixed;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            opacity:1;
+            background: #040404;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
             transition: all 0.3s ease-in-out;
 
-            ul{
-                display:flex;
-                flex-direction:column;
-                align-items:center;
-                justify-content:center;
-                height:100vh;
-                li{
-                    a{
-                        color:red;
-                        display:block;
-                        padding:1rem 0;
-                        text-transform:uppercase;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                li {
+                    a {
+                        color: red;
+                        display: block;
+                        padding: 1rem 0;
+                        text-transform: uppercase;
                     }
                 }
             }
