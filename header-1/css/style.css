@@ -1,5 +1,5 @@
 /**
-*------------------------------------------------------------------------------------------
+*-----------------------------------------------------------
 *	= PROJECT NAME: A LANDING PAGE
 *	= PROJECT DESCRIPTION: A BUSINESS LANDING PAGE
 *	= FILE NAME: CUSTOM.CSS
@@ -10,14 +10,96 @@
 *	= VERSION: 0.0.1
 *	= DEVELOPMENT DATE: 21/12/16
 * 	= COUNTRY: BANGLADESH
-*------------------------------------------------------------------------------------------
+*-----------------------------------------------------------
 */
 /**
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 *	:: SECOND WAY TO RESET CODE
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 */
-html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite, code, del, dfn, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, lagend, table, caption, tbody, thead, tfoot, th, tr, td, section, article, aside, header, hgroup, nav, menu, footer, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, mark, span, em, strong, img, ol, ul, li, figure, figcaption, details, embed, canvas, audio, video, output, ruby summary input {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+pre,
+a,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+lagend,
+table,
+caption,
+tbody,
+thead,
+tfoot,
+th,
+tr,
+td,
+section,
+article,
+aside,
+header,
+hgroup,
+nav,
+menu,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+mark,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+figcaption,
+details,
+embed,
+canvas,
+audio,
+video,
+output,
+ruby,
+summary,
+input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,24 +111,38 @@ html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite,
 }
 
 /**
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 *	:: HTML5 DISPLAY RULE
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 */
-address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, main {
+address,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
   display: block;
 }
 
 /**
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 *	:: GLOBAL STYLE
-*------------------------------------------------------------------------------------------
+*---------------------------------------------
 */
 :root {
-  --ff:verdana;
-  --width:85vw;
-  --padding-top:5rem;
-  --paddin-bottom:5rem;
+  --ff: verdana;
+  --width: 85vw;
+  --padding-top: 5rem;
+  --paddin-bottom: 5rem;
 }
 
 html {
@@ -82,7 +178,8 @@ html body h1 {
   font: 2rem/1.5rem "Cabin", Helvetica, Arial, sans-serif;
 }
 
-html body h2, html body h3 {
+html body h2,
+html body h3 {
   font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
 }
 
@@ -107,7 +204,10 @@ html body a:link {
   text-decoration: none;
 }
 
-html body a:hover, html body a:focus, html body a:active, html body a:visited {
+html body a:hover,
+html body a:focus,
+html body a:active,
+html body a:visited {
   color: var(--border-top-color);
   text-decoration: underline;
 }
@@ -155,12 +255,16 @@ html body input {
   padding: 3px;
 }
 
-html body input:focus, html body input:hover {
+html body input:focus,
+html body input:hover {
   background: #ededed;
   color: #4e4e4e;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  :root {
+    --width: 90vw;
+  }
   .azad-section {
     padding: 3rem 0;
   }
@@ -168,13 +272,13 @@ html body input:focus, html body input:hover {
 
 :root {
   --border-top: tomato;
-  --text: rgba(57,225,245,1);
-  --bg:rgba(65,64,66,.8);
-  --white:rgba(255,255,255,1);
-  --black:rgba(0,0,0,1);
-  --tranparent:rgba(0,0,0,0);
-  --shadow:0,0,1em rgba(0,0,0,.25);
-  --border-radius:3px;
+  --text: rgba( 57, 225, 245, 1 );
+  --bg: rgba( 65, 64, 66, .8 );
+  --white: rgba( 255, 255, 255, 1 );
+  --black: rgba( 0, 0, 0, 1 );
+  --tranparent: rgba( 0, 0, 0, 0 );
+  --shadow: 0, 0, 1em rgba( 0, 0, 0, .25 );
+  --border-radius: 3px;
 }
 
 .azad-header {
@@ -182,6 +286,7 @@ html body input:focus, html body input:hover {
   background: var(--white);
   -webkit-box-shadow: var(--shadow);
   -ms-box-shadow: var(--shadow);
+  -o-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
   padding: 1rem 0;
 }
@@ -265,7 +370,7 @@ html body input:focus, html body input:hover {
   padding: 1rem 0;
   position: absolute;
   right: 9999rem;
-  top: calc(100% + 2rem);
+  top: calc( 100% + 2rem);
   -webkit-transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
   transition: opacity 0.15s linear, right 0s 0.15s, -webkit-transform 0.15s linear;
   transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
@@ -282,7 +387,7 @@ html body input:focus, html body input:hover {
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul li:hover ul {
-  right: calc(100% + 2rem);
+  right: calc( 100% + 2rem);
 }
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul li ul {
@@ -300,7 +405,7 @@ html body input:focus, html body input:hover {
 
 .azad-header .header-container .azad-nav .desktop-menus ul li ul li ul:after {
   border-bottom-color: transparent;
-  border-left-color: #000000;
+  border-left-color: #000;
   top: 1.5rem;
   right: -1.2rem;
   bottom: auto;
@@ -490,12 +595,18 @@ html body input:focus, html body input:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .azad-demo .azad-flex .azad-flex-item {
   width: 100%;
   background: black;
   padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .azad-demo .azad-flex .azad-flex-item ul {
@@ -597,6 +708,22 @@ html body input:focus, html body input:hover {
 
 .azad-sites a:hover {
   color: var(--black);
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .azad-flex {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .azad-flex .azad-flex-item {
+    width: 100%;
+    background: none !important;
+    padding: 0px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .azad-footer {
