@@ -13,11 +13,93 @@
 *------------------------------------------------------------------------------------------
 */
 /**
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 *	:: SECOND WAY TO RESET CODE
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 */
-html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite, code, del, dfn, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, lagend, table, caption, tbody, thead, tfoot, th, tr, td, section, article, aside, header, hgroup, nav, menu, footer, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, mark, span, em, strong, img, ol, ul, li, figure, figcaption, details, embed, canvas, audio, video, output, ruby summary input {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+pre,
+a,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+lagend,
+table,
+caption,
+tbody,
+thead,
+tfoot,
+th,
+tr,
+td,
+section,
+article,
+aside,
+header,
+hgroup,
+nav,
+menu,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+mark,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+figcaption,
+details,
+embed,
+canvas,
+audio,
+video,
+output,
+ruby,
+summary,
+input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,24 +111,38 @@ html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, big, cite,
 }
 
 /**
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 *	:: HTML5 DISPLAY RULE
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 */
-address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, main {
+address,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
   display: block;
 }
 
 /**
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 *	:: GLOBAL STYLE
-*------------------------------------------------------------------------------------------
+*----------------------------------------------------------
 */
 :root {
-  --ff:verdana;
-  --width:85vw;
-  --padding-top:5rem;
-  --paddin-bottom:5rem;
+  --ff: verdana;
+  --width: 85vw;
+  --padding-top: 5rem;
+  --paddin-bottom: 5rem;
 }
 
 html {
@@ -82,7 +178,8 @@ html body h1 {
   font: 2rem/1.5rem "Cabin", Helvetica, Arial, sans-serif;
 }
 
-html body h2, html body h3 {
+html body h2,
+html body h3 {
   font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
 }
 
@@ -107,7 +204,10 @@ html body a:link {
   text-decoration: none;
 }
 
-html body a:hover, html body a:focus, html body a:active, html body a:visited {
+html body a:hover,
+html body a:focus,
+html body a:active,
+html body a:visited {
   color: var(--border-top-color);
   text-decoration: underline;
 }
@@ -124,7 +224,8 @@ html body em {
   font-style: italic;
 }
 
-html body ol, html body ul {
+html body ol,
+html body ul {
   list-style: none;
 }
 
@@ -155,12 +256,13 @@ html body input {
   padding: 3px;
 }
 
-html body input:focus, html body input:hover {
+html body input:focus,
+html body input:hover {
   background: #ededed;
   color: #4e4e4e;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .azad-section {
     padding: 3rem 0;
   }
@@ -168,13 +270,13 @@ html body input:focus, html body input:hover {
 
 :root {
   --border-top: tomato;
-  --text: rgba(57,225,245,1);
-  --bg:rgba(65,64,66,.8);
-  --white:rgba(255,255,255,1);
-  --black:rgba(0,0,0,1);
-  --tranparent:rgba(0,0,0,0);
-  --shadow:0,0,1em rgba(0,0,0,.25);
-  --border-radius:3px;
+  --text: rgba( 57, 225, 245, 1 );
+  --bg: rgba( 65, 64, 66, .8 );
+  --white: rgba( 255, 255, 255, 1 );
+  --black: rgba( 0, 0, 0, 1 );
+  --tranparent: rgba( 0, 0, 0, 0 );
+  --shadow: 0, 0, 1em rgba( 0, 0, 0, .25 );
+  --border-radius: 3px;
 }
 
 .azad-header {
@@ -256,7 +358,7 @@ html body input:focus, html body input:hover {
   width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .azad-header .header-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -324,7 +426,7 @@ html body input:focus, html body input:hover {
   background: var(--text);
   color: var(--white);
   text-align: left;
-  marign-top: 84px;
+  margin-top: 84px;
 }
 
 .azad-demo h2 {
