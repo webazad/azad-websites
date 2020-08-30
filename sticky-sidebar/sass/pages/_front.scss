@@ -1,0 +1,87 @@
+.azad-demo {
+
+    background: var( --text );
+    color: var( --white );
+    text-align: left;
+
+    .azad-container {        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 2rem;
+
+        
+        .main-content {
+            background: red;
+        }
+
+        .sidebar-content {
+            position: relative;
+            width: 100%;
+
+            .sticky {
+                background: green;
+            }
+
+            .nonsticky {
+                background: red;
+                position: absolute;
+                position: fixed;
+                top: 0;
+                max-width: 376px;
+                bottom: 0;
+            }
+        }
+    }
+
+
+    h2 { 
+        margin-bottom: 2rem;
+    }
+
+    a { 
+        color: blue; 
+        &:link { 
+            color: var( --white, yellow );
+        }
+        &:hover { 
+            color: var( --black );
+        }
+    }
+
+    .azad-grid {
+        display: flex;
+        flex-direction: column;
+
+        .grid-links {
+            background: blue;
+            ul {
+                display: flex;
+                flex-direction: row;
+                li {
+                    padding: .5rem;
+                }
+            }
+        }
+        .grid-content {
+            background: white;
+            color: black;
+        }
+    } 
+}
+
+@media only screen and ( max-width: 767px ),
+only screen and ( max-device-width: 767px ) {
+    
+    .azad-flex {
+        flex-direction: column !important;
+
+        .azad-flex-item {
+
+            width: 100%;
+            background: none !important;
+            padding: 0px !important;
+            box-sizing: border-box;
+        }
+    }
+    
+}

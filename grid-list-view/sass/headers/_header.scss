@@ -1,0 +1,246 @@
+.azad-header {
+
+    border-top: .001rem solid var( --border-top );
+    background: var( --white );
+    -webkit-box-shadow: var( --shadow );
+    -ms-box-shadow: var( --shadow );
+    -moz-box-shadow: var( --shadow );
+	-o-box-shadow: var( --shadow );
+    box-shadow: var( --shadow );
+    padding: 1rem 0;
+
+    .header-container {
+	
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+		
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                line-height: 0;
+                a {
+                    display: inline-block;
+                    img {
+                        height: 52px;
+                    }
+                }
+            }
+			
+            .burger-button {
+                display: none;
+            }
+			
+        }
+
+        .azad-nav {
+		
+            display: flex;
+            align-items: center;
+			
+            .desktop-menus {
+			
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+	                justify-content: flex-end;
+                    align-items: center;
+                    
+                    li {
+					
+                        position: relative;
+						
+                        a {
+                            color: var( --text );
+                            padding: 0rem 1rem;
+                            display: block;
+                            width: 100%;
+                        }
+						
+                        ul {
+                            background: #000;
+                            border-radius: 0.4rem;
+                            color: #fff;
+                            font-size: 1rem;
+                            opacity: 0;
+                            padding: 1rem 0;
+                            position: absolute;
+                            right: 9999rem;
+                            top: calc( 100% + 2rem );
+                            transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+                            transform: translateY( 0.6rem );
+                            width: 10rem;
+                            z-index: 1;
+                            display: initial;
+
+                            li {
+                                a {
+                                    padding: .5rem 0;
+                                }
+                                &:hover ul {
+                                    right: calc( 100% + 2rem );
+                                }
+                                ul {
+                                    top: -1rem;
+                                    &:before {
+                                        top: 0;
+                                        height: auto;
+                                        width: 2rem;
+                                        left: auto;
+                                        right: -2rem;
+                                        bottom: 0;
+                                    }
+                                    &:after {
+                                        border-bottom-color: transparent;
+                                        border-left-color: #000;
+                                        top: 1.5rem;
+                                        right: -1.2rem;
+                                        bottom: auto;
+                                    }
+                                }
+                            }
+
+                            &:before, &:after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: 100%;
+                            }
+							
+                            &:before {
+                                height: 2rem;
+                                left: 0;
+                                right: 0;
+                            }
+							
+                            &:after {
+                                border: 0.6rem solid transparent;
+                                border-bottom-color: #000;
+                                right: 1.8rem;
+                            }
+                        }
+						
+                        &:hover > ul {
+                            right: 0;
+                            opacity: 1;
+                            transform: translateY( 0 );
+                            transition: opacity 0.15s linear, transform 0.15s linear;
+                        }
+						
+                    }                    
+                }
+            }            
+        }
+    }
+	
+    .mobile-menus {
+        display: none;
+    }
+	
+}
+
+@media only screen and ( max-width: 767px ),
+only screen and ( max-device-width: 767px ) {
+    
+    .azad-header {
+        padding: 1rem 0;
+        perspective: 75rem;
+        _overflow: hidden;
+
+        .header-container {
+            flex-direction: column;            
+            .logo {
+                justify-content: center;
+                position: relative;
+
+                .burger-button {
+                    padding: 5px;
+                    border-radius: 4px;
+                    background: var( --text );
+                    width: 28px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate( 0%, -50% ) rotate( 0deg );                    
+
+                    span {
+                        position: relative;
+                        width: 100%;
+                        height: 4px;
+                        background: var( --white );
+
+                        &:before, &:after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            background: var( --white );
+                            transition:all .5s ease-in-out;
+                        }
+                        &:before {
+                            top: -12px;
+                        }
+                        &:after {
+                            top: 12px;
+                        }
+                    }
+                }
+                .burger-button.active {
+                    span {
+                        background: none;
+                        &:before, &:after {
+                            top: 0;
+                        }
+                        &:before {
+                            transform: rotate( 45deg );
+                        }
+                        &:after {
+                            transform: rotate( 315deg );
+                        }
+                    }
+                }                                
+            }
+            .desktop-menus {
+                display: none;
+            }
+        }
+        .mobile-menus {
+            display: block;
+            position: absolute;
+            top: 0;
+            background: var( --white );
+            left: 0;
+            width: 30rem;
+            height: 100vh;        
+            transform: rotateY( 180deg );
+            flex-direction: column;
+            transform-origin:top left;
+            transition: transform 350ms cubic-bezier( 0.55, 0.55, 0.675, 0.19 );
+            ul {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                li {
+                    a {
+                        color: var( --text );
+                        display: block;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+        .mobile-menus.active {
+            transform: rotateY( 0deg );
+        }
+    }
+}

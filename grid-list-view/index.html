@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <title>Grid / List View</title>
+        <!-- Language code -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- device code -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- BIG WRAPPER BEGINS -->
+        <main class="big-wrapper">
+            <!-- HEADER BEGINS -->
+            <header class="azad-header">
+                <div class="azad-container">
+                    <div class="header-container">
+                        <div class="logo">
+                            <h1><a href="../index.html"><img src="imgs/logo-header.png"></a></h1>
+                            <div class="burger-button"><span></span></div>
+                        </div>
+                        <div class="azad-nav">
+                            <nav class="desktop-menus">
+                                <ul class="primary">
+                                    <li class="current">
+                                        <a href="#">Home</a>
+                                        <ul>                                            
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li class="current">
+                                                <a href="#">Home</a>
+                                                <ul>
+                                                    <li><a href="#">Services</a></li>
+                                                    <li><a href="#">About</a></li>
+                                                    <li><a href="#">Contact</a></li>
+                                                    <li>
+                                                        <a href="#">Blog</a>
+                                                        <ul>
+                                                            <li><a href="#">Services</a></li>
+                                                            <li><a href="#">About</a></li>
+                                                            <li><a href="#">Contact</a></li>
+                                                            <li>
+                                                                <a href="#">Blog</a>
+                                                                <ul>
+                                                                    <li><a href="#">Blog</a></li>
+                                                                    <li><a href="#">Services</a></li>
+                                                                    <li><a href="#">About</a></li>
+                                                                    <li><a href="#">Contact</a></li>
+                                                                </ul>
+                                                            </li>                                                            
+                                                        </ul>
+                                                    </li>                                                    
+                                                </ul>
+                                            </li>
+                                        </ul>                                        
+                                    </li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>                            
+                        </div>
+                    </div>                    
+                </div>
+                <nav class="mobile-menus">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header><!-- ends header -->
+            <!-- SECTION BEGINS -->
+            <section class="azad-section azad-demo">
+                <div class="azad-container">
+                    <h2>Demos for Kindergarten School...</h2>
+                    <div class="azad-grid">
+                        <div class="grid-links">
+                            <ul>
+                                <li data-view="list-view"><i class="fas fa-th-list"></i></li>
+                                <li data-view="grid-view"><i class="fas fa-th-large"></i></li>
+                            </ul>
+                        </div>
+                        <div class="list-view">
+                            <div class="grid-item">
+                                <div class=""><img src="imgs/logo-header.png" /></div>
+                                <div class="">
+                                    <p>Demos for Kindergarten School Demos for Kindergarten School Demos for Kindergarten School</p>
+                                    <a href="">Click here</a>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class=""><img src="imgs/logo-header.png" /></div>
+                                <div class="">
+                                    <p>Demos for Kindergarten School Demos for Kindergarten School Demos for Kindergarten School</p>
+                                    <a href="">Click here</a>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class=""><img src="imgs/logo-header.png" /></div>
+                                <div class="">
+                                    <p>Demos for Kindergarten School Demos for Kindergarten School Demos for Kindergarten School</p>
+                                    <a href="">Click here</a>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class=""><img src="imgs/logo-header.png" /></div>
+                                <div class="">
+                                    <p>Demos for Kindergarten School Demos for Kindergarten School Demos for Kindergarten School</p>
+                                    <a href="">Click here</a>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class=""><img src="imgs/logo-header.png" /></div>
+                                <div class="">
+                                    <p>Demos for Kindergarten School Demos for Kindergarten School Demos for Kindergarten School</p>
+                                    <a href="">Click here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- ends section -->
+            <!-- FOOTER BEGINS -->
+            <div class="azad-footer">
+                <div class="azad-container">
+                    <div class="footer-container">
+                        <p>Copyright 2020 Reserved by Azad</p>
+                    </div>
+                </div>                
+            </footer><!-- ends footer -->
+        </main><!-- ends big-wrapper -->
+        <script type="text/javascript">
+            var navButton = document.querySelector('.burger-button');
+            var navMenu = document.querySelector('.mobile-menus');
+            var win = window;
+            
+            function openMenu(event) {
+                navButton.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            }
+            
+            function closeMenu(event) {
+                if (navButton.classList.contains('active')) {
+                    navButton.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            }
+            navButton.addEventListener('click', openMenu, false);
+            win.addEventListener('click',closeMenu, false);
+
+            // selector(".burger-button").addEventListener('click', function(){
+            //     this.classList.toggle('active');                
+            //     selector(".mobile-menus").classList.toggle('active');
+            //     selector(".mobile").classList.toggle('active');
+            // });
+
+            // function selector(s){
+            //     return document.querySelector(s)
+            // }
+        </script>
+        <script>
+
+            var btns = document.querySelectorAll('.grid-links ul li');
+            var content = document.querySelector('.grid-content');
+
+            btns.forEach(function(btn){
+
+                btn.addEventListener('click',function(){
+                    btns.forEach(function(item){
+                        item.classList.remove('active');
+                    });
+                    btn.classList.add('active');
+
+                    var view = btn.getAttribute('data-view');
+                    var content = document.querySelector(".list-view");
+                    
+                });
+
+            });
+
+        </script>
+
+    </body>
+</html>
