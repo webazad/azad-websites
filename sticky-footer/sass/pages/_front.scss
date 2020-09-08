@@ -1,0 +1,72 @@
+.azad-demo {
+    background: var( --text );
+    color: var( --white );
+    text-align: left;
+
+    .azad-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+
+        .azad-1 {
+            background: red;
+        }
+        .azad-2 {
+            background: blue;
+        }
+    }
+
+    h2 { 
+        margin-bottom: 2rem;
+    }
+
+    a { 
+        color: blue; 
+        &:link {
+            color: var( --white, yellow );
+        }
+        &:hover { 
+            color: var( --black );
+        }
+    }    
+}
+
+.azad-sites {
+    background: var( --bg );
+    color: var( --white );
+    text-align: left;
+
+    h2 { 
+        margin-bottom: 2rem;
+    }
+
+    a { 
+        color: blue; 
+        &:link {
+            color: var( --white );
+        }
+        &:hover { 
+            color: var( --black );
+        }
+    }    
+}
+
+@media only screen and ( max-width: 767px ),
+only screen and ( max-device-width: 767px ) {
+    .azad-demo {
+        .azad-row {
+            background: yellow;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+
+            .azad-1 { 
+                // grid-area: 2/1/3/2;
+                grid-row: 2;
+            }
+            .azad-2 { 
+                // grid-area: 1/1/2/2;
+                grid-row: 1;
+            }            
+        }
+    }
+}

@@ -1,0 +1,550 @@
+/**
+*------------------------------------------------------------------------------------------
+*	= PROJECT NAME: A LANDING PAGE
+*	= PROJECT DESCRIPTION: A BUSINESS LANDING PAGE
+*	= FILE NAME: CUSTOM.CSS
+*	= AUTHOR: MD. ABUL KALAM AZAD
+*	= AUTHOR URI: http://www.theinfotechs.com
+*	= DEVELOPER: MD. ABUL KALAM AZAD
+*	= DEVELOPER URI: http://www.theinfotechs.com
+*	= VERSION: 0.0.1
+*	= DEVELOPMENT DATE: 21/12/16
+* 	= COUNTRY: BANGLADESH
+*------------------------------------------------------------------------------------------
+*/
+/**
+*----------------------------------------------------
+*	:: SECOND WAY TO RESET CODE
+*----------------------------------------------------
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+pre,
+a,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+lagend,
+table,
+caption,
+tbody,
+thead,
+tfoot,
+th,
+tr,
+td,
+section,
+article,
+aside,
+header,
+hgroup,
+nav,
+menu,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+mark,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+figcaption,
+details,
+embed,
+canvas,
+audio,
+video,
+output,
+ruby,
+summary,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  vertical-align: baseline;
+  font: inherit;
+  background: transparent;
+}
+
+/**
+*----------------------------------------------------
+*	:: HTML5 DISPLAY RULE
+*----------------------------------------------------
+*/
+address,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  display: block;
+}
+
+/**
+*----------------------------------------------------
+*	:: GLOBAL STYLE
+*----------------------------------------------------
+*/
+:root {
+  --ff: verdana;
+  --width: 85vw;
+  --padding-top: 5rem;
+  --paddin-bottom: 5rem;
+}
+
+html {
+  background: var(--bg-color);
+}
+
+html body {
+  font: 1em/1.25em "Cabin", Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  /* Chrome Suffery     */
+  -moz-font-smoothing: antialiased;
+  /* Firefox            */
+  -ms-font-smoothing: antialiased;
+  /* Internet Explorer  */
+  -o-font-smoothing: antialiased;
+  /* Opera              */
+  font-smoothing: antialiased;
+  /* Official           */
+}
+
+html body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+html body main .azad-container {
+  width: var(--width);
+  margin: 0 auto;
+}
+
+html body main .azad-section {
+  padding: var(--padding-top) 0;
+}
+
+html body main h1 {
+  font: 2rem/1.5rem "Cabin", Helvetica, Arial, sans-serif;
+}
+
+html body main h2,
+html body main h3 {
+  font: 21px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+
+html body main h4 {
+  font: 16px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+
+html body main h5 {
+  font: 14px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+
+html body main h6 {
+  font: 12px/1.5em "Cabin", Helvetica, Arial, sans-serif;
+}
+
+html body main a {
+  text-decoration: none;
+}
+
+html body main a:link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+html body main a:hover,
+html body main a:focus,
+html body main a:active,
+html body main a:visited {
+  color: var(--border-top-color);
+  text-decoration: underline;
+}
+
+html body main p {
+  margin-bottom: 1em;
+}
+
+html body main strong {
+  font-weight: bold;
+}
+
+html body main em {
+  font-style: italic;
+}
+
+html body main ol,
+html body main ul {
+  list-style: none;
+}
+
+html body main blockquote {
+  border: 0;
+  font: italic 21px/1.5em "Gentium Basic", Georgia, serif;
+  color: #2894d8;
+}
+
+html body main blockquote cite {
+  display: block;
+  margin-top: 42px;
+  font-size: 16px;
+  font-style: normal;
+}
+
+html body main hr {
+  border: none;
+  height: 1px;
+  background-color: #ededed;
+  margin: 3em 0;
+}
+
+html body main input {
+  background: #696969;
+  border: 1px solid #c3c3c3;
+  color: #cbcbcb;
+  padding: 3px;
+}
+
+html body main input:focus,
+html body main input:hover {
+  background: #ededed;
+  color: #4e4e4e;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .azad-section {
+    padding: 3rem 0;
+  }
+}
+
+:root {
+  --border-top: tomato;
+  --text: rgba( 57, 225, 245, 1 );
+  --bg: rgba( 65, 64, 66, .8 );
+  --white: rgba( 255, 255, 255, 1 );
+  --black: rgba( 0, 0, 0, 1 );
+  --tranparent: rgba( 0, 0, 0, 0 );
+  --shadow: 0, 0, 1em rgba( 0, 0, 0, .25 );
+  --border-radius: 3px;
+}
+
+.azad-header {
+  border-top: 0.001rem solid var(--border-top);
+  background: var(--white);
+  -webkit-box-shadow: var(--shadow);
+  -ms-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
+
+.azad-header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.azad-header .header-container .logo {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.azad-header .header-container .logo h1 {
+  line-height: 0;
+}
+
+.azad-header .header-container .logo h1 a {
+  display: inline-block;
+}
+
+.azad-header .header-container .logo .burger-button {
+  display: none;
+}
+
+.azad-header .header-container .azad-nav {
+  width: 100%;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus {
+  height: 100%;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li a {
+  color: var(--text);
+  padding: 2rem 1rem;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  background: var(--text);
+  height: 0;
+}
+
+.azad-header .header-container .azad-nav .desktop-menus ul li a:hover:after {
+  height: 100%;
+  background: rgba(0, 186, 186, 0.1) !important;
+}
+
+.azad-header .mobile-menus {
+  display: none;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .azad-header .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .azad-header .header-container .logo {
+    text-align: center;
+    position: relative;
+  }
+  .azad-header .header-container .logo .burger-button {
+    padding: 5px;
+    border-radius: 4px;
+    background: var(--text);
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .azad-header .header-container .logo .burger-button span {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    margin: 10px 0;
+    background: var(--white);
+    color: red;
+  }
+  .azad-header .header-container .logo .burger-button span:before, .azad-header .header-container .logo .burger-button span:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    background: var(--white);
+  }
+  .azad-header .header-container .logo .burger-button span:after {
+    top: 10px;
+  }
+  .azad-header .header-container .logo .burger-button.active span {
+    background: none;
+  }
+  .azad-header .header-container .logo .burger-button.active span:before, .azad-header .header-container .logo .burger-button.active span:after {
+    top: 0;
+  }
+  .azad-header .header-container .logo .burger-button.active span:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .azad-header .header-container .logo .burger-button.active span:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .azad-header .header-container .desktop-menus {
+    display: none;
+  }
+  .azad-header .active {
+    display: block;
+  }
+}
+
+.azad-demo {
+  background: var(--text);
+  color: var(--white);
+  text-align: left;
+}
+
+.azad-demo .azad-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.azad-demo .azad-row .azad-1 {
+  background: red;
+}
+
+.azad-demo .azad-row .azad-2 {
+  background: blue;
+}
+
+.azad-demo h2 {
+  margin-bottom: 2rem;
+}
+
+.azad-demo a {
+  color: blue;
+}
+
+.azad-demo a:link {
+  color: var(--white, yellow);
+}
+
+.azad-demo a:hover {
+  color: var(--black);
+}
+
+.azad-sites {
+  background: var(--bg);
+  color: var(--white);
+  text-align: left;
+}
+
+.azad-sites h2 {
+  margin-bottom: 2rem;
+}
+
+.azad-sites a {
+  color: blue;
+}
+
+.azad-sites a:link {
+  color: var(--white);
+}
+
+.azad-sites a:hover {
+  color: var(--black);
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .azad-demo .azad-row {
+    background: yellow;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .azad-demo .azad-row .azad-1 {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .azad-demo .azad-row .azad-2 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+.azad-footer {
+  background: var(--text);
+  color: var(--white);
+  padding: 1rem 0;
+  background: red;
+  margin-top: auto;
+}
+
+.azad-footer .footer-container {
+  overflow: overlay;
+}
+
+.azad-footer .footer-container p {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
